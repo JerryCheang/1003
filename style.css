@@ -1,0 +1,408 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #e3f2fd, #fce4ec, #e8f5e9);
+  background-attachment: fixed;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+  font-size: 2.2rem; /* 默認桌面大小 */
+  line-height: 1.2;
+  word-wrap: break-word; /* 確保長字會換行，而不是超出 */
+}
+
+header h3.muted {
+  margin-top: 0;
+  font-weight: normal;
+  color: #333;
+  font-size: 1.2rem; /* 默認桌面大小 */
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+/* 響應式調整，螢幕寬度小於768px時 */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;  /* 自動縮小，保持完整顯示 */
+  }
+
+  header h3.muted {
+    font-size: 1rem;    /* 副標題也縮小 */
+  }
+}
+
+
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: none;
+  background: #90caf9;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #42a5f5;
+}
+
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.poster img {
+  display: block;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.6em;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.event-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.event-gallery img {
+  width: 350px;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery for works */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+.work-item {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+}
+
+.work-award {
+  position: absolute;
+  background: #ffeb3b;
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+}
+
+.work-video {
+  width: 100%;
+  border-radius: 10px;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.work-title {
+  margin: 15px 0 5px;
+  font-size: 1.2em;
+}
+
+.kv {
+  margin: 3px 0;
+  color: #555;
+}
+
+.award-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.award-thumb {
+  width: 90px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.organizer-section h3 {
+  margin-bottom: 20px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.05);
+}
+
+/* Organizer & Support footer */
+.units {
+  text-align: center;
+  margin-top: 80px;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #f0f8ff, #e6f0ff);
+  border-top: 3px solid #cddfff;
+  border-radius: 20px 20px 0 0;
+}
+
+.units h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2b3a67;
+}
+
+.unit-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;       
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.unit {
+  text-align: center;
+  flex: 1;
+}
+
+.unit img {
+  width: 120px;      
+  height: 120px;    
+  -o-object-fit: contain;    
+     object-fit: contain; 
+  transition: transform 0.3s ease;
+}
+
+.unit img:hover {
+  transform: scale(1.05);
+}
+
+.unit p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #334;
+}
+
+/* 手機時可自動換行 */
+@media (max-width: 768px) {
+  .unit-logos {
+    flex-wrap: wrap;        /* ✅ 小螢幕時才換行 */
+    gap: 30px;
+  }
+
+  .unit img {
+    max-width: 100px;
+  }
+}
+
+.work-item {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative; /* 讓徽章可以絕對定位 */
+  min-height: 400px;
+  transition: transform 0.3s;
+}
+
+.work-item:hover {
+  transform: translateY(-5px); /* 卡片懸浮效果 */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.work-award {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 18px;           /* 調小字體 */
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  padding: 4px 10px;         /* 縮小內距 */
+  border-radius: 30px;       /* 保持圓角 */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  z-index: 10;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.work-award::before {          
+  margin-right: 4px;
+}
+
+.site-header {
+  position: relative;
+  height: 300px;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.header-slideshow img.active {
+  opacity: 1;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 2; /* 文字顯示在圖片上方 */
+}
+
+.school-logo {
+  width: 200px;  
+  margin-bottom: 25px; 
+}
+
+.site-header {
+  position: relative;
+  height: 300px;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.header-slideshow img.active {
+  opacity: 0.3;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 2; /* 文字在圖片上方 */
+}
+
+.school-logo {
+  width: 250px; /* 調大 logo */
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  header h1 { font-size: 1.8rem; }
+  header h3.muted { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  header h1 { font-size: 1.5rem; }
+  header h3.muted { font-size: 1rem; }
+  
+  .poster img, .event-gallery img, .work-video { width: 100%; height: auto; }
+  
+  .unit-logos { flex-wrap: wrap; gap: 30px; }
+  
+  .work-item { min-height: auto; }
+}
+
+.work-video,
+.work-video iframe {
+  width: 100%;       
+  height: auto;      
+  border-radius: 10px;
+}
