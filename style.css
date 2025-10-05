@@ -399,10 +399,3 @@ footer {
   
   .work-item { min-height: auto; }
 }
-
-.work-video,
-.work-video iframe {
-  width: 100%;       
-  height: auto;      
-  border-radius: 10px;
-}
